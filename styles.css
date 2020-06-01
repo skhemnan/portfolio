@@ -16,7 +16,7 @@ body{
 	font-size:16px;
 	color:#222222;
 	margin: 14px 0px 10px 20px;
-	width:85%;
+	width:80%;
 }
 
 .btn-group{
@@ -40,7 +40,7 @@ body{
 .define-box{
 	display:flex;
 	border: 2px solid #dfe1e5;
-	width:690px;
+	width:40%;
 	border-radius:24px;
 	height:44px;
 	margin-left: 40px;
@@ -113,8 +113,8 @@ body{
 }
 
 .code{
-	height:4%;
-	width:4%;
+	height:5%;
+	width:5%;
 	margin:11px 20px 0px 0px;
 }
 
@@ -172,6 +172,10 @@ body{
 	max-width:40rem;
 	line-height:1.25;
 	margin-left:40px;
+}
+
+.sub-definitions{
+	list-style:disc;
 }
 
 .projects{
@@ -283,4 +287,20 @@ a:hover{
 	text-decoration:underline;
 }
 
+@media screen and (max-width: 1200px){
+	.container{
+		max-width:80vw;
+	}
+	.define-box{
+		width:40%;
+	}
+	.define{
+		width:70%;
+	}
+}
 
+@media screen and (max-width: 400px){
+	.container{
+		max-width:1000px;
+	}
+}
