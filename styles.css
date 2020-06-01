@@ -4,7 +4,8 @@ body{
 	height:100%;
 	font-family: 'Roboto', sans-serif;
 	background-color:#ffffff;
-	transition: all 5s;
+	overflow-x:hidden !important;
+	margin:0;
 }
 
 .break{
@@ -316,10 +317,12 @@ a:hover{
 	}
 }
 
-@media screen and (max-width: 500px){	
+@media screen and (max-width: 500px){
 	
 	.header{
 		padding-bottom:20px;
+		overflow-x:hidden;
+		width:95%;
 	}	
 
 	.define-box{
@@ -328,12 +331,13 @@ a:hover{
 	}
 
 	.define{
-		width:65%;
+		width:70%;
 	}
 
 	.container{
-		max-width:95vw;
-		margin:20px 0px 10px 5px;
+		max-width:95%;
+		margin:20px -10px 10px 10px;
+		overflow-x:hidden !important;
 	}
 
 	.dictionary{
@@ -384,9 +388,13 @@ a:hover{
 	}
 
 	.definition-list{
-		margin-left:-5px;
-		max-width:18rem;
+		margin-left:-15px;
+		max-width:22rem;
 		font-size:14px;
+	}
+
+	.projects{
+		margin-left:5px;
 	}
 
 	.title{
@@ -404,6 +412,28 @@ a:hover{
 	.skill{
 		font-size:14px;
 		margin-bottom:8px;
+	}
+
+	.expand-btn{
+		height:15px;
+		width:40px;
+		margin: 18px 5px 5px 20px	
+	}
+
+	.expanded-btn{
+		height:15px;
+		width:40px;
+		margin: 18px 5px 5px 20px	
+	}
+
+	.show-less{
+		font-size:14px;
+		margin-left:10px;
+	}
+
+	.expand{
+		font-size:14px;
+		margin-left:10px;	
 	}
 
 	.footer{
