@@ -41,7 +41,7 @@ body{
 .define-box{
 	display:flex;
 	border: 2px solid #dfe1e5;
-	width:50%;
+	width:40%;
 	border-radius:24px;
 	height:44px;
 	margin-left: 40px;
