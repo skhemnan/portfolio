@@ -97,13 +97,10 @@ body{
 	margin:0;
 	margin-top:20px;
 	padding:2.5px 15px 2.5px 15px;
-	height:50%;
+	height:20%;
 	font-size:35px;
 }
 
-.icon i{
-	content:'hello';
-}
 
 .title{
 	display:flex;
@@ -249,11 +246,32 @@ body{
 	background-size:100%
 }
 
+.expanded-btn{
+	height:30px;
+	width:80px;
+	padding:0px;
+	cursor:pointer;
+	margin:10px 5px 5px 20px;
+	border:none;
+	outline:none;
+	background: url('./assets/arrow.png') no-repeat;
+	background-size:100%;
+	transform: rotate(180deg);
+}
+
+
 .expand{
 	color:#70757a;
 	font-size:16px;
 	margin: 15px 0px 15px 20px;
 }
+
+.show-less{
+	color:#70757a;
+	font-size:16px;
+	margin: 15px 0px 15px 20px;
+}
+
 
 .container{
 	max-width:60vw;
