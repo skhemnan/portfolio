@@ -26,5 +26,18 @@ function handleHorizontalScroll(){
 	});
 }
 
+function handleSocialIcons(){
+	$('#email').hover(function(){
+		$('.icon-img').addClass('fa-envelope')
+	}, function(){$('.icon-img').removeClass('fa-envelope')})	
+	$('#github').hover(function(){
+		$('.icon-img').addClass('fa-github')
+	}, function(){$('.icon-img').removeClass('fa-github')})	
+	$('#linkedin').hover(function(){
+		$('.icon-img').addClass('fa-linkedin')
+	}, function(){$('.icon-img').removeClass('fa-linkedin')})	
+}
+
 $(handleExpand());
 $(handleHorizontalScroll());
+$(handleSocialIcons());
