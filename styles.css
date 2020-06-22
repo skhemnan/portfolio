@@ -43,7 +43,7 @@ body{
 
 .define-box{
 	display:flex;
-	border: 2px solid #dfe1e5;
+	border: 1px solid #dfe1e5;
 	width:40%;
 	border-radius:24px;
 	height:44px;
@@ -265,6 +265,7 @@ body{
 .expand{
 	color:#70757a;
 	font-size:16px;
+	font-weight:100;
 	margin: 15px 0px 15px 20px;
 }
 
