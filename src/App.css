@@ -6,7 +6,8 @@
   min-height: 101vh;
   margin: -10px;
   display: flex;
-  justify-content: center;
+	flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -24,20 +25,66 @@
 
 .info {
 	display: flex;
-	height: 350px;
-	width: 500px;
+	height: 200px;
+	width: 600px;
+	padding: -10px 10px -10px 10px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: solid 2px #FFF;
-	border-radius: 12px;
-	color: #FFF
+	color: #FFF;
+	border-top: solid 5px #fff;
+	border-bottom: solid 2px #fff;
 }
 
 .title {
-	font-size: 45px
+	font-size: 88px;
+	font-weight: 200;
+	margin-bottom: 2px;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	align-self: flex-start;
+	top: 0
+}
+
+.code-symbol {
+	font-size: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 b {
 	color: #e99c20
+}
+
+.subtitle {
+	font-size: 21px;
+	font-family: sans-serif;
+	font-weight: 100;
+	padding:0;
+}
+
+.button-container {
+	margin: 30px 0px 30px 10px;
+}
+
+.show-modal-button {
+	font-size: 15px;
+	background: none;
+	color: #DEDEDE;
+	border: none;
+	cursor: pointer;
+}
+
+.arrow {
+	color: white;
+	font-size: 20px;
+	margin: 5px 0px 5px 0px;
+	align-self: center;
+	margin-left: 40%;
+	cursor: pointer;
+	background: none;
+	border: none;
 }
