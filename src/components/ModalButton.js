@@ -13,15 +13,6 @@ const ModalButton = ({ position, title }) => {
 
 	return (
 		<>
-			{position == "down" && (
-				<>
-			  <Modal position='down' showModal={showModal} close={handleClick}/>
-				<div class="modal-button-container">
-			    <button className="arrow" onClick={handleClick}><FaChevronUp/></button>
-					<button className="show-modal-button" onClick={handleClick}>{title}</button>
-				</div>
-				</>
-			)}
 			{position == "up" && (
 				<>
 				<div class="modal-button-container">
@@ -29,6 +20,15 @@ const ModalButton = ({ position, title }) => {
 			    <button className="arrow" onClick={handleClick}><FaChevronDown/></button>
 				</div>
 				<Modal position='up' showModal={showModal} close={handleClick}/>
+				</>
+			)}
+			{position == "down" && (
+				<>
+			  <Modal position='down' showModal={showModal} close={handleClick}/>
+				<div class="modal-button-container">
+			    <button className="arrow" onClick={handleClick}><FaChevronUp/></button>
+					<button className="show-modal-button" onClick={handleClick}>{title}</button>
+				</div>
 				</>
 			)}
 		</>
