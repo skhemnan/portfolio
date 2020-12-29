@@ -68,7 +68,7 @@ const Info = () => {
 							onMouseEnter={() => setShowEmail(true)}
 							onMouseLeave={() => setShowEmail(false)}
 							className="social-link"
-						  href="http://www.gmail.com"
+							href="mailto:saahil.khemlani@gmail.com"
 						>
 							<FaEnvelope/>
 						</a>

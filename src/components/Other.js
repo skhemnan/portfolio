@@ -38,7 +38,7 @@ const Other = () => {
 					</a>
 				</li>
 			</ul>
-		<a className="resume-link" href="">Download Resume here</a>
+			<a className="resume-link" href="https://drive.google.com/file/d/1pOFcG9Myn1s3dG9OknKnSuKpIQNimGpq/view?usp=sharing">Download Resume here</a>
 		</div>
 	);
 };
