@@ -17,7 +17,7 @@ const Projects = () => {
 					/>
 					<div className="description-container">
 						<p className="project-description">
-							Travel app written in
+							Visitr: Travel app written in
 							HTML, CSS, and JQuery.
 							Based on temperature and
 							weather, Visitr will
@@ -48,7 +48,7 @@ const Projects = () => {
 					/>
 					<div className="description-container">
 						<p className="project-description">
-							API to CSV converter
+							Filtable: API to CSV converter
 							written in React Hooks
 							and Context. Paste any
 							REST API URL, select the
