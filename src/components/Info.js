@@ -1,99 +1,115 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaGithub, FaEnvelope, FaLinkedin, FaHammer, FaHeart, FaReact } from 'react-icons/fa'
+import {
+  FiAlertCircle,
+  FiArchive,
+  FiGithub,
+  FiAtSign,
+  FiLinkedin,
+} from "react-icons/fi";
 
 const Info = () => {
-	const [showEmail, setShowEmail] = useState(false);
-	const [showGithub, setShowGithub] = useState(false);
-	const [showLinkedin, setShowLinkedin] = useState(false);
+  // const [showEmail, setShowEmail] = useState(false);
+  // const [showGithub, setShowGithub] = useState(false);
+  // const [showLinkedin, setShowLinkedin] = useState(false);
 
-	return (
-		<>
-			<AnimatePresence>
-				<div>
-					<motion.div
-						initial={{
-							opacity: 0,
-							height: 0
-						}}
-						animate={{
-							opacity: 1,
-							height: 200
-						}}
-						transition={{
-							duration: 1,
-							type: "spring",
-							delay: 0.5
-						}}
-						class="info"
-					>
-						<motion.h1
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{
-								duration: 0.5,
-								delay: 1
-							}}
-							class="title"
-						>{
-              showEmail ? 'send me an email.' :
-							showGithub ? 'browse my github.' :
-							showLinkedin ? 'visit my linkedin.' :
-							"Hello, I'm Saahil."
-						 }
-						</motion.h1>
-						<motion.h2
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{
-								duration: 0.5,
-								delay: 1.5
-							}}
-							className="subtitle"
-						>
-							Full stack software
-							engineer • Product
-							analyst • Tech
-							enthusiast
-						</motion.h2>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ delay: 2.5 }}
-						className="social-container"
-					>
-						<div className="social-links">
-							<a
-							onMouseEnter={() => setShowEmail(true)}
-							onMouseLeave={() => setShowEmail(false)}
-							className="social-link"
-							href="mailto:saahil.khemlani@gmail.com"
-						>
-							<FaEnvelope/>
-						</a>
-						<a
-							onMouseEnter={() => setShowGithub(true)}
-							onMouseLeave={() => setShowGithub(false)}
-							className="social-link"
-							href="http://www.github.com/skhemnan"
-						>
-						  <FaGithub/>
-						</a>
-						<a
-							onMouseEnter={() => setShowLinkedin(true)}
-							onMouseLeave={() => setShowLinkedin(false)}
-							className="social-link"
-							href="http://www.github.com/in/hellosaahil"
-						>
-						  <FaLinkedin/>
-						</a>
-						</div>
-					</motion.div>
-				</div>
-			</AnimatePresence>
-		</>
-	);
+  const [heading, setHeading] = useState(0)
+
+  const titles = [
+    {id: 1, name: 'about', title: 'about me.', link: ''},
+    {id: 2, name: 'email', title: 'send me an email.', link: 'mailto:saahil.khemlani@gmail.com'},
+    {id: 3, name: 'github', title: 'browse my github.', link: 'http://www.github.com/skhemnan'},
+    {id: 4, name: 'linkedin', title: 'visit my linkedin.', link: 'http://www.github.com/in/hellosaahil'},
+    {id: 5, name: 'projects', title: 'about my work.', link: ''}
+  ]
+
+  return (
+    <>
+        <div>
+          <div class="info">
+            {heading == 0 ? 
+              <>
+                <h1 class="main-title">Hello, I'm Saahil.</h1>
+                <h2 className="subtitle">
+                  {/* App Developer • Product analyst • Tech enthusiast */}
+                  App Developer. Product Analyst. Tech enthusiast.
+                </h2>
+              </>
+              :
+              <>
+                {titles.map(x => {
+                  if(x.id === heading){
+                    return <h1 class="title">{x.title}</h1>
+                  }
+                })} 
+              </>
+            }
+            <div className="social-container">
+              {titles.map(x => {
+                return (
+                  <div className="social-links">
+                    <a
+                      onMouseEnter={() => setHeading(x.id)}
+                      onMouseLeave={() => setHeading(0)}
+                      className="social-link"
+                      href={x.link}
+                    >
+                      {
+                        x.id === 1 ? <FiAlertCircle/> : x.id === 2 ? <FiAtSign/> : x.id === 3 ? <FiGithub/> : x.id === 4 ? <FiLinkedin/> : <FiArchive/>
+                      }  
+                    </a> 
+                    <a class="social-text" href={x.link}>{x.title}</a>
+                  </div>
+                )
+              })}
+{/* 
+              <div className="social-links">
+                <a
+                  onMouseEnter={() => setHeading(1)}
+                  onMouseLeave={() => setHeading(0)}
+                  className="social-link"
+                  href="mailto:saahil.khemlani@gmail.com"
+                >
+                  <FiAlertCircle />
+                </a>
+                <a
+                  onMouseEnter={() => setHeading(2)}
+                  onMouseLeave={() => setHeading(0)}
+                  className="social-link"
+                  href="mailto:saahil.khemlani@gmail.com"
+                >
+                  <FiAtSign />
+                </a>
+                <a
+                  onMouseEnter={() => setHeading(3)}
+                  onMouseLeave={() => setHeading(0)}
+                  className="social-link"
+                  href="http://www.github.com/skhemnan"
+                >
+                  <FiGithub />
+                </a>
+                <a
+                  onMouseEnter={() => setHeading(4)}
+                  onMouseLeave={() => setHeading(0)}
+                  className="social-link"
+                  href="http://www.github.com/in/hellosaahil"
+                >
+                 <FiLinkedin />
+                </a>
+                <a
+                  onMouseEnter={() => setHeading(5)}
+                  onMouseLeave={() => setHeading(0)}
+                  className="social-link"
+                  href="mailto:saahil.khemlani@gmail.com"
+                >
+                  <FiArchive />
+                </a>
+              </div> */}
+            </div>
+          </div>
+        </div>
+    </>
+  );
 };
 
 export default Info;

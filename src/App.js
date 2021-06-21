@@ -10,9 +10,7 @@ function App() {
 
 	return (	
   <div class="background">
-		<ModalButton position='up' title='About myself & my experience'/>
 		<Info />
-		<ModalButton position='down' title='Projects and resume'/>
   </div>
   );}
 
