@@ -128,7 +128,7 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	margin-top: 5px;
+	margin-top: 50px;
 	flex-direction: row;
 	position: absolute;
 	bottom: 1vh;
@@ -244,6 +244,11 @@ body {
 		left: 2px;
 	}
 
+	.main-title {
+		position: absolute;
+		top: 10px
+	}
+
 	.social-container-bottom {
 		display: flex;
 		flex-direction: column;
@@ -260,10 +265,11 @@ body {
 }
 
 	.subtitle {
-		margin-top: 3vh;
 		align-items: flex-start;
 		justify-content: flex-start;
-		padding-left: 7vw
+		padding-left: 7vw;
+		position: absolute;
+		top: 43vh
 	}
 
 	.social-text {
@@ -271,13 +277,12 @@ body {
 	}
 
 	.section-title {
-		font-size: max(3vw, 60px);
-		max-width: 300px;
+		font-size: max(2vw, 50px);
 		font-weight: 100;
 		font-family: garamond;
 		justify-content: flex-start;
 		align-self: flex-end;
-		margin-right: 30px;
+		padding-right: 20px;
 		margin-top: 20px;
 		text-align: right;
 	}
