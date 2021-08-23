@@ -262,7 +262,7 @@ body {
 		justify-content: flex-end;
 		align-items: flex-start;
 		padding-left: 5vw;
-		position: fixed;
+		position: absolute;
 		bottom: min(7vh, 40px);
 		left: 2px;
 	}
@@ -300,7 +300,7 @@ body {
 		align-items: flex-start;
 		justify-content: flex-start;
 		padding-left: 7vw;
-		position: fixed;
+		position: absolute;
 		top: min(45vh, 275px);
 		/* padding-top: max(6vh, 70px); */
 		/* position: absolute; */
