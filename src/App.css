@@ -164,6 +164,7 @@ body {
 	/* font-size: max(1.5vw, 24px); */
 	cursor: pointer;
 	color: black;
+	font-weight: 800;
 	text-decoration: underline;
 }
 
@@ -172,6 +173,9 @@ body {
 	animation-direction: alternate;
 }
 
+.skill:visited {
+	color: black;
+}
 
 .social-links {
 	display: flex;
@@ -195,6 +199,12 @@ body {
 
 /* About Page */
 
+.about-icon {
+	position: fixed;
+	top: 2%; 
+	right: 2%
+}
+
 .about-container {
 	max-width: 95vw;
 	min-height: 70vh;
@@ -206,19 +216,18 @@ body {
 }
 
 .about-section {
-	width: 450px;
+	width: 400px;
 	min-height: 400px;
-	max-height: 80%;
+	max-height: 85%;
 	align-self: flex-start;
-	margin: 20px;
+	margin-right: 20px;
 	display: flex;
 	flex-direction: column;
 }
 
 .about-text {
 	font-family: garamond;
-	font-size: min(1.5vw, 23px);
-	font-weight: bold;
+	font-size: max(0.25vw, 24px);
 	line-height: 1.2;
 	text-align: justify;
 	color: #79776c
@@ -254,6 +263,10 @@ body {
 
 @media only screen and (max-width: 650px) {
 
+	.about-icon {
+		display: none
+	}
+
 	.social-container {
 		display: flex;
 		flex-direction: column;
@@ -261,7 +274,7 @@ body {
 		align-items: flex-start;
 		padding-left: 5vw;
 		position: absolute;
-		bottom: min(7vh, 40px);
+		bottom: max(7vh, 40px);
 		left: 2px;
 	}
 
@@ -277,9 +290,10 @@ body {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-		padding-left: 5vw;
+		padding-left: 12vw;
 		width: 100vw;
-		margin-top: 50px;
+		margin-top: 20px;
+		padding-bottom: 50px;
 		position: relative;
 	}
 
@@ -305,8 +319,13 @@ body {
 
 	.social-text {
 		display: block;
-		font-size: 17px
+		font-size: 17px;
+		color: black;
 	}
+	.social-text:visited {
+		color: black;
+	}
+
 
 	.section-title {
 		font-size: max(2vw, 50px);
