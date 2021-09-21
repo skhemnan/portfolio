@@ -164,14 +164,17 @@ body {
 	/* font-size: max(1.5vw, 24px); */
 	cursor: pointer;
 	color: black;
-	font-weight: 800;
+	/* text-decoration: underline; */
+}
+
+.skill-title {
+	/* font-size: max(1.9vw, 24px); */
+	cursor: pointer;
+	color: black;
+	font-weight: bold;
 	text-decoration: underline;
 }
 
-.skill:hover {
-	transition: all 0.2s ease-in;
-	animation-direction: alternate;
-}
 
 .skill:visited {
 	color: black;
@@ -202,7 +205,32 @@ body {
 .about-icon {
 	position: fixed;
 	top: 2%; 
-	right: 2%
+	right: 2%;
+	display: flex;
+	align-items: center;
+}
+
+.hover-over {
+	font-family: garamond;
+	font-size: 14px;
+	max-width: 80px;
+	text-align: center;
+	margin-right: -15px;
+	margin-bottom: 10px;
+	border: solid 1.5px black;
+	border-radius: 12px;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom
+}
+.bounce-2 {
+	animation-name: bounce-2;
+	animation-timing-function: ease;
+}
+@keyframes bounce-2 {
+	0%   { transform: translateY(0); }
+	50%  { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
 }
 
 .about-container {
@@ -227,10 +255,11 @@ body {
 
 .about-text {
 	font-family: garamond;
-	font-size: max(0.25vw, 24px);
+	font-size: min(1.8vw, 25px);
 	line-height: 1.2;
 	text-align: justify;
-	color: #79776c
+	transition: all 0.5s ease
+	/* color: #79776c */
 }
 
 .next-section {
@@ -361,6 +390,10 @@ body {
 	}
 
 	.next-section {
+		display: none
+	}
+
+	.hover-over {
 		display: none
 	}
 
