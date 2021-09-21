@@ -217,7 +217,8 @@ body {
 	text-align: center;
 	margin-right: -15px;
 	margin-bottom: 10px;
-	border: solid 1.5px black;
+	border: solid 1px #9c9c9c;
+	padding: 4px;
 	border-radius: 12px;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
