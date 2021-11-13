@@ -30,7 +30,7 @@ const Info = () => {
     {id: 2, name: 'github', title: 'browse my github.', link: 'http://www.github.com/skhemnan', icon: <FiGithub/>},
     {id: 3, name: 'linkedin', title: 'visit my linkedin.', link: 'http://www.linkedin.com/in/hellosaahil', icon: <FiLinkedin/>},
     {id: 4, name: 'email', title: 'send me an email.', link: 'mailto:saahil.khemlani@gmail.com', icon: <FiAtSign/>},
-    {id: 5, name: 'resume', title: 'download my resume.', link: 'https://drive.google.com/file/d/1pOFcG9Myn1s3dG9OknKnSuKpIQNimGpq/view?usp=sharing', icon: <FiArrowDownCircle/>}
+    {id: 5, name: 'resume', title: 'download my resume.', link: 'https://drive.google.com/file/d/1h4otNwpJjGQnBF4L6NROs7OJYbJcH7Db/view?usp=sharing', icon: <FiArrowDownCircle/>}
   ]
 
   return (
