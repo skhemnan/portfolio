@@ -61,7 +61,7 @@ return (
 					</div>
 					<div class='about-section' style={{color: fade ? '#d9d9d9' : '#79776c'}}>
 						<p class='about-text'>
-							I attribute my acquired skillset to my curiosity to my <Skill header text='Projects'/> and my need to solve everyday problems. <a class="skill" href={'http://google.com'}>Filtable</a> <a class="skill" href={'https://github.com/skhemnan/filtable'}>(Repo)</a>, 
+							I attribute my acquired skillset and my curiosity to my <Skill header text='Projects'/> and my need to solve everyday problems. <a class="skill" href={'http://google.com'}>Filtable</a> <a class="skill" href={'https://github.com/skhemnan/filtable'}>(Repo)</a>, 
 							a simple REST API to CSV converter,{' '} 
 							{/* <p class="icon"><FiArchive/></p> */}
 							fulfilled a particular need for gathering valuable customer data. I sought to solve problems in my personal life as well. I built <a class="skill" href={'https://github.com/skhemnan/tmdb_scraper'}>TMDb Scraper</a>
