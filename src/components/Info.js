@@ -26,7 +26,7 @@ const Info = () => {
   },[section])
 
   const titles = [
-    {id: 1, name: 'about', title: 'my story.', link: '', icon: <FiBookOpen/>, content: <About/>},
+    {id: 1, name: 'about', title: 'about me.', link: '', icon: <FiBookOpen/>, content: <About/>},
     {id: 2, name: 'github', title: 'browse my github.', link: 'http://www.github.com/skhemnan', icon: <FiGithub/>},
     {id: 3, name: 'linkedin', title: 'visit my linkedin.', link: 'http://www.linkedin.com/in/hellosaahil', icon: <FiLinkedin/>},
     {id: 4, name: 'email', title: 'send me an email.', link: 'mailto:saahil.khemlani@gmail.com', icon: <FiAtSign/>},
@@ -41,7 +41,7 @@ const Info = () => {
          <div class="info">
             {(heading === 0 && Object.keys(section).length === 0) ? 
               <>
-                <h1 class="main-title">Hello. I'm Saahil.</h1>
+                <h1 class="main-title">Saahil Khemnani</h1>
                 <h2 className="subtitle">
                   App Developer. Product Analyst. Tech enthusiast.
                 </h2>

@@ -32,7 +32,7 @@ return (
 			{!fade && 
 				<p class="hover-over bounce-2">{`${['Hover over "Experience"!']}`}</p>
 			}
-			<img src={hello} style={{width: 'auto', height: 100}}/> 
+		<img src={hello} style={{width: 'auto', height: 100}}/> 
 		</div>
 		<AnimatePresence>
 				<div class="about-container">
