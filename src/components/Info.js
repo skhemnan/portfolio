@@ -56,7 +56,7 @@ const Info = ({darkEnabled, setDarkEnabled}) => {
     {id: 2, name: 'github', title: 'browse my github.', link: 'http://www.github.com/skhemnan', icon: <FiGithub/>},
     {id: 3, name: 'linkedin', title: 'visit my linkedin.', link: 'http://www.linkedin.com/in/hellosaahil', icon: <FiLinkedin/>},
     {id: 4, name: 'email', title: 'send me an email.', link: 'mailto:saahil.khemlani@gmail.com', icon: <FiAtSign/>},
-    {id: 5, name: 'resume', title: 'download my resume.', link: 'https://drive.google.com/file/d/1h4otNwpJjGQnBF4L6NROs7OJYbJcH7Db/view?usp=sharing', icon: <FiArrowDownCircle/>}
+    {id: 5, name: 'resume', title: 'download my resume.', link: 'https://drive.google.com/file/d/1htEBIBYMCooSwsfpIeZO8ANj2FPgeqv2/view?usp=share_link', icon: <FiArrowDownCircle/>}
   ]
 
   return (
@@ -91,7 +91,7 @@ const Info = ({darkEnabled, setDarkEnabled}) => {
                       style={{color: colorSwitch}}
                       href={x.link}
                     >{x.icon}</a> 
-                    <a className="social-text" href={x.link} >{x.title}</a>                   
+                    <a className="social-text" style={{color: colorSwitch}} href={x.link} >{x.title}</a>                   
                     </>
                     :
                     <>
@@ -102,7 +102,7 @@ const Info = ({darkEnabled, setDarkEnabled}) => {
                       style={{color: colorSwitch}}
                       onClick={() => {setSection(x)}}
                     >{x.icon}</h3> 
-                    <h3 className="social-text" onClick={() => {setSection(x)}}>{x.title}</h3>
+                    <h3 className="social-text" style={{color: colorSwitch}} onClick={() => {setSection(x)}}>{x.title}</h3>
                     </>
                    }
                   </div>

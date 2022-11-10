@@ -7,54 +7,79 @@ import hello from '../../assets/hello.png'
 const About = ({darkEnabled}) => {
 
 let colorSwitch = darkEnabled ? 'white' : 'black'
+let colorSwitchPara = {
+	unfaded: darkEnabled ? '#d9d9d9' : '#79776c',
+	faded: darkEnabled ? '#79776c' : '#d9d9d9'
+}
 const [fade, setFade] = React.useState(false)
 
-const Skill = ({text, style, header}) => {
+const links = {
+	gajigesa: 'https://techcrunch.com/2021/02/03/gajigesa-a-fintech-startup-serving-underbanked-indonesian-workers-raises-2-5-million-seed-round/',
+	bitvore: 'http://www.bitvore.com',
+	filtable: 'https://github.com/skhemnan/filtable',
+	layaway: 'https://github.com/skhemnan/layawayAPI',
+	visitr: 'http://skhemnan.github.io/visitr'
+}
+
+const Skill = ({header, children, link}) => {
 	return <>
 					<a 
-					style={{fontSize: (header && fade) ? 30 : null, textDecorationLine: 'underline', color: colorSwitch}}
+					style={{fontSize: (header && fade) ? 30 : null, textDecorationLine: link || header ? 'underline' : 'none', color: colorSwitch}}
 					class="skill"
-					onMouseEnter={() => {setFade(true)}}
-					onMouseLeave={() => {setFade(false)}}
-					>{text}</a>
+					href={link ? link : null}
+					>{children}</a>
 				</>
   }
 
 return (
 	<>
 		<div class="about-icon">
-			{!fade && <p class="hover-over bounce-2" style={{color: colorSwitch}}>{`${['Hover over "Experience"!']}`}</p> }
-		  <img src={hello} style={{width: 'auto', height: 150}}/> 
+			{!fade && <p class="hover-over bounce-2" style={{color: colorSwitch}}>{`${['Hover over me!']}`}</p> }
+			<a
+					onMouseEnter={() => {setFade(true)}}
+					onMouseLeave={() => {setFade(false)}}	
+					style={{cursor: 'pointer'}}
+			>
+				<img src={hello} style={{width: 'auto', height: 150}}/> 
+			</a>
 		</div>
 		<AnimatePresence>
 				<div class="about-container">
 					<div class="about-section">
-						<p class="about-text" style={{color: fade ? '#d9d9d9' : '#79776c'}}>
-							Hello friend! I'm a full-stack web and app developer based in Jakarta, Indonesia, formerly Southern California, USA. 
-							I have 2 years of <Skill header text='Experience'/> with <a class="skill">React.js,</a> and <a class="skill">React Native,</a> (with <a class="skill">Redux,</a> <a class="skill">Redux-thunk,</a> and <a class="skill">React Context/Hooks</a>) To add some function to my shiny front end I also have experience in <a class="skill">Node.js,</a> <a class="skill">Express.js,</a> and <a class="skill">PostgreSQL,</a> 
-							{' '}to complete the stack. I'm all about serverless, having worked with <a class="skill">Firebase,</a> and <a class="skill">Google Cloud.</a> To avoid any mishaps and late nights troubleshooting, I'm also proficient in <a class="skill">Jest,</a> and <a class="skill">Appium,</a>. 
-							I'm a huge fan of lightweight and modular components with functional design in mind. I also enjoy writing automations and workflows with <a class="skill">Bash and Git</a> that make my job easier. I love working in a collaborative environment and believe in complete transparency and visbility in the workplace. 
+						<p class="about-text" style={{ color: fade ? colorSwitchPara.faded : colorSwitchPara.unfaded,}}>
+							Hello friend! Welcome to my digital resume! I’m a full-stack developer and product analyst based in sunny Los Angeles, California. 
+							I’ve spent a wonderful 2 years as a software engineer and had the privilege of working with numerous <Skill header>Technologies</Skill> such as <Skill>React.js,</Skill> 
+							<Skill>React Native,</Skill> <Skill>Express.js,</Skill> <Skill>GraphQL,</Skill> <Skill>Node.js</Skill> and <Skill>PostgreSQL</Skill>. 
+							As an early startup hire and product analyst, I’ve also spent extensive time with a number of <Skill header>Tools</Skill>, mainly{' '} 
+							<Skill>Android Studio,</Skill> <Skill>Xcode, </Skill> <Skill>Amplitude, </Skill> <Skill>Figma, </Skill> <Skill>Hubspot</Skill> and <Skill>Sentry</Skill>. 
+							I’m all about serverless so I’ve worked with <Skill>Firebase</Skill> and <Skill>Google Cloud</Skill>. 
+							Maintaining all issue tickets and documentation also could not have been easier without <Skill>Jira</Skill> and <Skill>Confluence</Skill>. 
+							To avoid late night troubleshooting, I also write tests using <Skill>Jest</Skill>. 
+							I am a huge fan of lightweight, mobile-first applications and modular components. 
+							I prefer a functional and purposeful design. I also enjoy writing automations and workflows that make my job easier with <Skill>Bash</Skill> and <Skill>Git</Skill>. 
+							I love working in a collaborative environment, believe in complete transparency in the workplace, and am always looking for a platform of learning and growth.
 						</p>
 					</div>
 					<div class='about-section'>
-						<p class='about-text' style={{color: fade ? '#d9d9d9' : '#79776c'}}>
-							For <Skill header text='Work'/>, I'm currently a <a class="skill">software engineer at</a>  <a class="skill" href={'https://techcrunch.com/2021/02/03/gajigesa-a-fintech-startup-serving-underbanked-indonesian-workers-raises-2-5-million-seed-round/'}>GajiGesa</a>, a startup dedicated to bringing <a class="skill">financial and employee wellness</a> to 60% of Indonesia's workforce.
-							{' '}My tasks include but are not limited to building employer back end infrastructure for clients, 
-							and contributing to the development, maintenance and improvement of our React Native apps, <a class="skill" href={'https://play.google.com/store/apps/details?id=com.gajitimnative'}>GajiTim</a> and <a class="skill" href={'https://play.google.com/store/apps/details?id=com.gajigesanative'}>GajiGesa</a>. 
-							Prior to that, I worked at <a class="skill" href={'http://www.bitvore.com'}>Bitvore</a>, 
-							{' '}an <a class="skill">AI Fintech Startup</a> based in California, dedicated to providing business insight from unstructured data among various news sources.
-							I worked as a <a class="skill">data analyst</a> where I wrote server-side Javascript for collecting and analyzing customer data for sentiment analysis that influenced our machine learning model. This in turn increased productivity and efficiency of the sales and product team.
+						<p class='about-text' style={{ color: fade ? colorSwitchPara.faded : colorSwitchPara.unfaded,}}>
+							In my <Skill header>Experience</Skill>, I’ve spent time as a full stack engineer, product analyst, and data analyst for a wide number of startups. As the <Skill>second engineering hire</Skill> at <Skill link={links.gajigesa}>GajiGesa</Skill> I helped develop the organization’s 
+							flagship android applications and their employer app backend API. As interim product analyst, I scoped and designed the company’s point rewards system, overseeing it from development to deployment. 
+							While at GajiGesa, I also worked part time as an <Skill>iOS Developer</Skill> at a <Skill>startup in the pet industry</Skill> utilizing AI/ML to improve dog park retention and community building. 
+							The application consisted of a video feed, live location feature, and profile customization. Prior to being an engineer, I served as a <Skill>Data Analyst</Skill> in sales operations for <Skill link={links.bitvore}>Bitvore</Skill>, 
+							an AI fintech startup focused on automated news and data surveillance for financial institutions. At Bitvore, I led sales operations and maintained the CRM for a repository of more than 50 clients. 
+							Every tool and skill earned from this experience allowed me to shape my eventual career goals in <Skill>mobile application development</Skill> and <Skill>product management</Skill>.
 						</p>
 					</div>
 					<div class='about-section'>
-						<p class='about-text' style={{color: fade ? '#d9d9d9' : '#79776c'}}>
-							I attribute my acquired skillset and my curiosity to my <Skill header text='Projects'/> and my need to solve everyday problems. <a class="skill" href={'http://google.com'}>Filtable</a> <a class="skill" href={'https://github.com/skhemnan/filtable'}>(Repo)</a>, 
-							a simple REST API to CSV converter,{' '} 
-							fulfilled a particular need for gathering valuable customer data. I sought to solve problems in my personal life as well. I built <a class="skill" href={'https://github.com/skhemnan/tmdb_scraper'}>TMDb Scraper</a>
-							{' '}to find and rank the top 10 movies that I've seen in my life, and I built <a class="skill" href={'http://skhemnan.github.io/visitr'}>Visitr</a> <a class="skill" href={"https://github.com/skhemnan/visitr"}>(Repo)</a> to quickly find out what I should pack in my suitcase based on my destination's weather. I'm always looking 
-							for a challenge and collaborative team that puts learning and growth first. When I'm not coding, you can find me watching Marvel movies, eating a Chipotle burrito, or staying up late at night watching tech conferences from around the world. I'd love to chat! Browse my socials by clicking the links below or send me an email anytime!
-							<div style={{width: '100%', height: 'auto', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
-							</div>
+						<p class='about-text' style={{ color: fade ? colorSwitchPara.faded : colorSwitchPara.unfaded,}}>
+							I attribute a great amount of my acquired skills to my personal <Skill header>Projects</Skill> that stemmed from product ideas or as solutions to my everyday problems. 
+							I designed the API for <Skill link={links.layaway}>Layaway</Skill>, a smart shopping application to help me and many others combat impulse buying and encouraged a tactic to defer 
+							bigger purchases until enough money was saved. Additionally, <Skill link={links.filtable}>Filtable</Skill> is a simple REST API to CSV converter I had built for my operations team at Bitvore to 
+							streamline the acceptance testing of the AI Sentiment algorithm. To combat decision fatigue when packing for a trip, I also developed <Skill link={links.visitr}>Visitr</Skill> to quickly find out 
+							what I should pack in my suitcase based on my destination’s weather. I'm always looking for a challenging and collaborative team that values a team member who asks questions 
+							about the bigger picture When I'm not coding, you can find me watching Marvel movies, eating a Chipotle burrito, or 
+							staying up late at night watching tech conferences from around the world. I'd love to chat! Browse my socials by clicking the links below or send me an email anytime!
+
 						</p>
 					</div>
 				</div>
