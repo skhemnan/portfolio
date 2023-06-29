@@ -17,7 +17,6 @@ const links = {
 	gajigesa: 'https://techcrunch.com/2021/02/03/gajigesa-a-fintech-startup-serving-underbanked-indonesian-workers-raises-2-5-million-seed-round/',
 	bitvore: 'http://www.bitvore.com',
 	filtable: 'https://github.com/skhemnan/filtable',
-	layaway: 'https://github.com/skhemnan/layawayAPI',
 	visitr: 'http://skhemnan.github.io/visitr'
 }
 
@@ -48,16 +47,16 @@ return (
 					<div class="about-section">
 						<p class="about-text" style={{ color: fade ? colorSwitchPara.faded : colorSwitchPara.unfaded,}}>
 							Hello friend! Welcome to my digital resume! I’m a full-stack developer and product analyst based in sunny Los Angeles, California. 
-							I’ve spent a wonderful 2 years as a software engineer and had the privilege of working with numerous <Skill header>Technologies</Skill> such as <Skill>React.js,</Skill> 
-							<Skill>React Native,</Skill> <Skill>Express.js,</Skill> <Skill>GraphQL,</Skill> <Skill>Node.js</Skill> and <Skill>PostgreSQL</Skill>. 
+							I’ve spent a wonderful 5 years as a software engineer and had the privilege of working with numerous <Skill header>Technologies</Skill> such as <Skill>React.js,</Skill> 
+							<Skill>React Native,</Skill> <Skill>Express.js,</Skill>, <Skill>Typescript,</Skill> <Skill>GraphQL,</Skill> <Skill>Node.js</Skill> and <Skill>PostgreSQL</Skill>. 
 							As an early startup hire and product analyst, I’ve also spent extensive time with a number of <Skill header>Tools</Skill>, mainly{' '} 
 							<Skill>Android Studio,</Skill> <Skill>Xcode, </Skill> <Skill>Amplitude, </Skill> <Skill>Figma, </Skill> <Skill>Hubspot</Skill> and <Skill>Sentry</Skill>. 
-							I’m all about serverless so I’ve worked with <Skill>Firebase</Skill> and <Skill>Google Cloud</Skill>. 
-							Maintaining all issue tickets and documentation also could not have been easier without <Skill>Jira</Skill> and <Skill>Confluence</Skill>. 
-							To avoid late night troubleshooting, I also write tests using <Skill>Jest</Skill>. 
+							I’m all about serverless so I’ve worked with <Skill>Firebase,</Skill> and <Skill>Google Cloud,</Skill>. 
+							Maintaining all issue tickets and documentation also could not have been easier without <Skill>Jira,</Skill> and <Skill>Confluence,</Skill>. 
+							To avoid late night troubleshooting, I also write tests using <Skill>Jest,</Skill>. 
 							I am a huge fan of lightweight, mobile-first applications and modular components. 
-							I prefer a functional and purposeful design. I also enjoy writing automations and workflows that make my job easier with <Skill>Bash</Skill> and <Skill>Git</Skill>. 
-							I love working in a collaborative environment, believe in complete transparency in the workplace, and am always looking for a platform of learning and growth.
+							I prefer a functional and purposeful design. I also enjoy writing automations and workflows that make my job easier with <Skill>Bash,</Skill> and <Skill>Git,</Skill>. 
+							I thrive with user feedback, which I often monitor with <Skill>Amplitude,</Skill> and <Skill>Sentry</Skill>.
 						</p>
 					</div>
 					<div class='about-section'>
@@ -73,8 +72,8 @@ return (
 					<div class='about-section'>
 						<p class='about-text' style={{ color: fade ? colorSwitchPara.faded : colorSwitchPara.unfaded,}}>
 							I attribute a great amount of my acquired skills to my personal <Skill header>Projects</Skill> that stemmed from product ideas or as solutions to my everyday problems. 
-							I designed the API for <Skill link={links.layaway}>Layaway</Skill>, a smart shopping application to help me and many others combat impulse buying and encouraged a tactic to defer 
-							bigger purchases until enough money was saved. Additionally, <Skill link={links.filtable}>Filtable</Skill> is a simple REST API to CSV converter I had built for my operations team at Bitvore to 
+							I scoped, designed and built <Skill>OneFitness</Skill> (pending app store approval), the ultimate fitness iOS app that provides personalized strength training programs centered around periodization with effortless progress tracking.
+							Additionally, <Skill link={links.filtable}>Filtable</Skill> is a simple REST API to CSV converter I had built for my operations team at Bitvore to 
 							streamline the acceptance testing of the AI Sentiment algorithm. To combat decision fatigue when packing for a trip, I also developed <Skill link={links.visitr}>Visitr</Skill> to quickly find out 
 							what I should pack in my suitcase based on my destination’s weather. I'm always looking for a challenging and collaborative team that values a team member who asks questions 
 							about the bigger picture When I'm not coding, you can find me watching Marvel movies, eating a Chipotle burrito, or 

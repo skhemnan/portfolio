@@ -293,10 +293,11 @@ body {
 
 .about-text {
 	font-family: garamond;
-	font-size: min(1.8vw, 25px);
-	line-height: 1.2;
+	font-size: min(1.6vw, 25px);
+	line-height: 1.1;
 	text-align: justify;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
+	margin-top: -25px
 	/* color: #79776c */
 }
 
