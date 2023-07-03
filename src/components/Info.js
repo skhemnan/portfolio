@@ -66,7 +66,7 @@ const Info = ({darkEnabled, setDarkEnabled}) => {
             {(heading === 0 && Object.keys(section).length === 0) ? 
               <>
                 <h1 className={"main-title"} style={{color: colorSwitch}}>Saahil Khemnani</h1>
-                <h2 className={"subtitle"} style={{color: colorSwitch}}> Product Engineer. Business Analyst. Tech enthusiast.</h2>
+                <h2 className={"subtitle"} style={{color: colorSwitch}}> Software Engineer. Product Analyst. Tech enthusiast.</h2>
               </>
               :
               <>
