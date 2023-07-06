@@ -56,7 +56,7 @@ const Info = ({darkEnabled, setDarkEnabled}) => {
     {id: 2, name: 'github', title: 'browse my github.', link: 'http://www.github.com/skhemnan', icon: <FiGithub/>},
     {id: 3, name: 'linkedin', title: 'visit my linkedin.', link: 'http://www.linkedin.com/in/hellosaahil', icon: <FiLinkedin/>},
     {id: 4, name: 'email', title: 'send me an email.', link: 'mailto:saahil.khemlani@gmail.com', icon: <FiAtSign/>},
-    {id: 5, name: 'resume', title: 'download my resume.', link: 'https://drive.google.com/file/d/1SThlsUupgXlbAdbwXKYAzPRf6df9Phcs/view?usp=sharing', icon: <FiArrowDownCircle/>}
+    {id: 5, name: 'resume', title: 'download my resume.', link: 'https://drive.google.com/file/d/1dOmZOabsM7aNMPk8lTl40YMK8dRqMYKS/view?usp=sharing', icon: <FiArrowDownCircle/>}
   ]
 
   return (

@@ -17,7 +17,8 @@ const links = {
 	gajigesa: 'https://techcrunch.com/2021/02/03/gajigesa-a-fintech-startup-serving-underbanked-indonesian-workers-raises-2-5-million-seed-round/',
 	bitvore: 'http://www.bitvore.com',
 	filtable: 'https://github.com/skhemnan/filtable',
-	visitr: 'http://skhemnan.github.io/visitr'
+	visitr: 'http://skhemnan.github.io/visitr',
+	calendly: 'http://calend.ly/saahil-khemnani/introductory-call'
 }
 
 const Skill = ({header, children, link}) => {
@@ -77,7 +78,7 @@ return (
 							streamline the acceptance testing of the AI Sentiment algorithm. To combat decision fatigue when packing for a trip, I also developed <Skill link={links.visitr}>Visitr</Skill> to quickly find out 
 							what I should pack in my suitcase based on my destination’s weather. I'm always looking for a challenging and collaborative team that values a team member who asks questions 
 							about the bigger picture When I'm not coding, you can find me watching Marvel movies, eating a Chipotle burrito, or 
-							staying up late at night watching tech conferences from around the world. I'd love to chat! Browse my socials by clicking the links below or send me an email anytime!
+							staying up late at night watching tech conferences from around the world. I'd love to chat! Browse my socials by clicking the links below or <Skill link={links.calendly}>schedule a call</Skill>!
 
 						</p>
 					</div>
